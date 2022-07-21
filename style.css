@@ -1,0 +1,45 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.page-container {
+    padding: 0;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.heading-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5% 3%;
+}
+
+.heading-left h1 {
+    font-size: 23px;
+    font-weight: 1000;
+}
+
+.heading-right {
+    display: flex;
+}
+
+.get-in-touch-container img {
+    margin-top: 5px;
+    margin-right: 35px;
+}
+
+.heading-right button {
+    font-weight: bold;
+    padding: 10px 24px;
+    border-radius: 8px;
+    background-color: rgb(223, 151, 35);
+    border: 0;
+}
+
+
