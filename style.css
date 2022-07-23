@@ -1,10 +1,12 @@
 * {
     font-family: 'Lato', sans-serif;
+    /* background-color: rgb(237, 255, 248); */
 }
 
 body {
     margin: 0;
     overflow-x: hidden;
+    background-color: rgb(237, 255, 248);
 }
 
 .page-container {
@@ -70,4 +72,74 @@ body {
     width: 30px;
 }
 
+.form-box {
+    border: 0;
+    height: 65vh;
+    width: 28vw;
+    border-radius: 45px;
+    margin: 2% auto;
+    padding: 15px;
+    background-color: rgb(165, 188, 178);
+    /* border: 1px solid black; */
+}
 
+.form-container {
+    text-align: center;
+    position: relative;
+    margin-top: 7%;
+}
+
+.form-container p {
+    margin-bottom: 10%;
+}
+
+.first-form {
+    display: flex;
+    justify-content: space-between;
+    width: 76%;
+    margin-left: 11.5%;
+}
+
+.second-form {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.input-container {
+    position: relative;
+    padding-bottom: 22px;
+}
+
+.label-container {
+    position: absolute;
+    left: 25px;
+    bottom:57px;
+    text-align: center;
+    background-color: rgb(165, 188, 178);
+    border-radius: 5px;
+    padding: 0 3px;
+}
+
+.label-container label {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(118, 39, 109);
+}
+
+.input-container input {
+    width: 90%;
+    height: auto;
+    padding: 12px 10px;
+    border: 2px solid black;
+    border-radius: 4px;
+    /* background-color: rgb(153, 175, 165); */
+    background-color: transparent;
+}
+
+.first-form input {
+    width: 88%;
+}
+
+.first-form .label-container {
+    left: 19px;
+}
