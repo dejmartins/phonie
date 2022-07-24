@@ -6,10 +6,6 @@ let currentTelecomCarrier = "";
 let currentPattern = "";
 
 function startApp() {
-  // Your entire app should not necessarily be coded inside this
-  // single function (though there's no penalty for that),
-  // so create and use/call additional functions from here
-  // pls remove the below and make some magic in here!
   document.getElementById("telephone").addEventListener("input", (e) => {
     telephoneInput[e.target.name] = e.target.value;
     isMatched();
@@ -19,32 +15,33 @@ function startApp() {
   document.getElementById("telecomCarrier").addEventListener("change", (e) => {
     currentTelecomCarrier = e.target.value;
     setPattern();
+    isMatched();
   });
 }
 
 function setPattern() {
   if (currentTelecomCarrier === "mtn") {
     document.getElementById("telephone").pattern =
-      "^[\\+0234]+[789]+0+[346]+\\d{7}";
-    currentPattern = "^[\\+0234]+[789]+0+[346]+\\d{7}";
+      "^[+0234]+[789](?=0(?=6|3|4|2)|1(?=4|0|3|6))(?=\\d)";
+    currentPattern = "^[+0234]+[789](?=0(?=6|3|4|2)|1(?=4|0|3|6))(?=\\d)";
   }
 
   if (currentTelecomCarrier === "glo") {
     document.getElementById("telephone").pattern =
-      "^[\\+0234]+[789]+[01]+[157]+\\d{7}";
-    currentPattern = "^[\\+0234]+[789]+[01]+[157]+\\d{7}";
+      "^[+0234]+[789](?=0(?=5|7)|1(?=5|1))(?=\\d)";
+    currentPattern = "^[+0234]+[789](?=0(?=5|7)|1(?=5|1))(?=\\d)";
   }
 
   if (currentTelecomCarrier === "airtel") {
     document.getElementById("telephone").pattern =
-      "^[\\+0234]+[789]+[01]+[1278]+\\d{7}";
-    currentPattern = "^[\\+0234]+[789]+[01]+[1278]+\\d{7}";
+      "^[+0234]+[789](?=0(?=1|8|7|2)|1(?=2))(?=\\d)";
+    currentPattern = "^[+0234]+[789](?=0(?=1|8|7|2)|1(?=2))(?=\\d)";
   }
 
   if (currentTelecomCarrier === "9mobile") {
     document.getElementById("telephone").pattern =
-      "^[\\+0234]+[89]+[01]+[789]+\\d{7}";
-    currentPattern = "^[\\+0234]+[89]+[01]+[789]+\\d{7}";
+      "^[+0234]+[89](?=0(?=8|9)|1(?=8|7))(?=\\d)";
+    currentPattern = "^[+0234]+[89](?=0(?=8|9)|1(?=8|7))(?=\\d)";
   }
 }
 
