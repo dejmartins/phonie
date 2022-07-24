@@ -42,23 +42,36 @@
                 <div class="form-container">
                     <h1>Get In Touch</h1>
                     <p>Our friendly team would love to hear from you</p>
+                    
                     <form action="" class="first-form">
-                        <div class="input-container">
-                            <div class="label-container">
-                                <label for="firstname">FirstName</label>
+                        <div class="telecom-carrier">
+                            <p>Choose your carrier:</p>
+                            <div>
+                                <select name="telecomCarrier" id="telecomCarrier">
+                                    <option value="9mobile">9Mobile</option>
+                                    <option value="airtel">Airtel</option>
+                                    <option value="glo">Glo</option>
+                                    <option value="mtn">Mtn</option>
+                                </select>
                             </div>
-                            <input type="text">
                         </div>
-                        <div class="input-container">
-                            <div class="label-container">
-                                <label for="lastName">LastName</label>
+                        <div class="name-container">
+                            <div class="input-container">
+                                <div class="label-container">
+                                    <label for="firstname">FirstName</label>
+                                </div>
+                                <input type="text">
                             </div>
-                            <input type="text">
+                            <div class="input-container">
+                                <div class="label-container">
+                                    <label for="lastName">LastName</label>
+                                </div>
+                                <input type="text">
+                            </div>
                         </div>
                 
                     </form>
                     <form action="" class="second-form">
-
                         <div class="input-container">
                             <div class="label-container">
                                 <label for="email">Email</label>
@@ -69,8 +82,15 @@
                             <div class="label-container">
                                 <label for="phoneNumber">Phone Number</label>
                             </div>
-                            <input type="tel">
+                            <input type="text" id="telephone" name="telephone" maxlength="14" pattern="" title="Invalid number for selected carrier" autocomplete="on">
+                            <datalist id="numbers">
+                                <option value="0903">
+                                <option value="0808">
+                                <option value="0802">
+                            </datalist>
+                            <img src="" alt="mtn" id="telecomIcon">
                         </div>
+                        <button type="submit">submit</button>
                     </form>
                 </div>
 

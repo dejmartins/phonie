@@ -1,3 +1,7 @@
+:root{
+    --primary-purple:rgb(118, 39, 109); 
+}
+
 * {
     font-family: 'Lato', sans-serif;
     /* background-color: rgb(237, 255, 248); */
@@ -89,15 +93,15 @@ body {
     margin-top: 7%;
 }
 
-.form-container p {
-    margin-bottom: 10%;
+.first-form {
+    margin-top: 19%;
+    margin-left: 11.5%; 
 }
 
-.first-form {
+.first-form .name-container{
     display: flex;
     justify-content: space-between;
-    width: 76%;
-    margin-left: 11.5%;
+    width: 86%;
 }
 
 .second-form {
@@ -123,17 +127,26 @@ body {
 .label-container label {
     font-size: 14px;
     font-weight: bold;
-    color: rgb(118, 39, 109);
+    color: var(--primary-purple);
 }
 
 .input-container input {
     width: 90%;
     height: auto;
-    padding: 12px 10px;
+    padding: 12px 10px ;
     border: 2px solid black;
     border-radius: 4px;
     /* background-color: rgb(153, 175, 165); */
     background-color: transparent;
+}
+
+.input-container img {
+    position: absolute;
+    bottom: 44%;
+    right: 4%;
+    max-width: 50px;
+    height: 32px;
+    display: none;
 }
 
 .first-form input {
@@ -143,3 +156,28 @@ body {
 .first-form .label-container {
     left: 19px;
 }
+
+.telecom-carrier {
+    display: flex;
+    position: absolute;
+    top: 26%;
+    left: 10%;
+    margin-left: 1.5%;
+    align-items: center;
+}
+
+.telecom-carrier p {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.telecom-carrier select{
+    background-color: transparent;
+    border: 0px solid black;
+    border-radius: 4px;
+    color: var(--primary-purple);
+    font-size: bold;
+}
+
+
+
