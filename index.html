@@ -43,7 +43,7 @@
                     <h1>Get In Touch</h1>
                     <p>Our friendly team would love to hear from you</p>
                     
-                    <form action="" class="first-form">
+                    <div action="" class="top-div">
                         <div class="telecom-carrier">
                             <p>Choose your carrier:</p>
                             <div>
@@ -70,8 +70,8 @@
                             </div>
                         </div>
                 
-                    </form>
-                    <form action="" class="second-form">
+                    </div>
+                    <div action="" class="bottom-div">
                         <div class="input-container">
                             <div class="label-container">
                                 <label for="email">Email</label>
@@ -83,15 +83,16 @@
                                 <label for="phoneNumber">Phone Number</label>
                             </div>
                             <input type="text" id="telephone" name="telephone" maxlength="14" pattern="" title="Invalid number for selected carrier" autocomplete="on">
-                            <datalist id="numbers">
-                                <option value="0903">
-                                <option value="0808">
-                                <option value="0802">
-                            </datalist>
                             <img src="" alt="mtn" id="telecomIcon">
                         </div>
+                        <div class="input-container">
+                            <div class="label-container">
+                                <label for="email" id="message">Message</label>
+                            </div>
+                            <textarea name="Message" id="Message" cols="30" rows="3"></textarea>
+                        </div>
                         <button type="submit">submit</button>
-                    </form>
+                    </div>
                 </div>
 
             </div>
