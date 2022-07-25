@@ -22,26 +22,27 @@ function startApp() {
 function setPattern() {
   if (currentTelecomCarrier === "mtn") {
     document.getElementById("telephone").pattern =
-      "^[+0234]+[789](?=0(?=6|3|4|2)|1(?=4|0|3|6))(?=\\d)";
-    currentPattern = "^[+0234]+[789](?=0(?=6|3|4|2)|1(?=4|0|3|6))(?=\\d)";
+      "^[+0234]+(?=803|816|903|810|806|703|706|813|814|906)(?=\\d)";
+    currentPattern =
+      "^[+0234]+(?=803|816|903|810|806|703|706|813|814|906)(?=\\d)";
   }
 
   if (currentTelecomCarrier === "glo") {
     document.getElementById("telephone").pattern =
-      "^[+0234]+[789](?=0(?=5|7)|1(?=5|1))(?=\\d)";
-    currentPattern = "^[+0234]+[789](?=0(?=5|7)|1(?=5|1))(?=\\d)";
+      "^[+0234]+(?=805|905|807|811|705|815)(?=\\d)";
+    currentPattern = "^[+0234]+(?=805|905|807|811|705|815)(?=\\d)";
   }
 
   if (currentTelecomCarrier === "airtel") {
     document.getElementById("telephone").pattern =
-      "^[+0234]+[789](?=0(?=1|8|7|2)|1(?=2))(?=\\d)";
-    currentPattern = "^[+0234]+[789](?=0(?=1|8|7|2)|1(?=2))(?=\\d)";
+      "^[+0234]+(?=907|708|802|902|812|701|808)(?=\\d)";
+    currentPattern = "^[+0234]+(?=907|708|802|902|812|701|808)(?=\\d)";
   }
 
   if (currentTelecomCarrier === "9mobile") {
     document.getElementById("telephone").pattern =
-      "^[+0234]+[89](?=0(?=8|9)|1(?=8|7))(?=\\d)";
-    currentPattern = "^[+0234]+[89](?=0(?=8|9)|1(?=8|7))(?=\\d)";
+      "^[+0234]+(?=909|908|818|809|817)(?=\\d)";
+    currentPattern = "^[+0234]+(?=909|908|818|809|817)(?=\\d)";
   }
 }
 

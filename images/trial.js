@@ -2,7 +2,7 @@ console.log("serenren");
 
 number = "2348088893500";
 
-let regex = "^[+0234]+[789](?=0(?=1|8|7|2)|1(?=2))(?=\\d)";
+let regex = "^[+0234]+(?=907|708|802|902|812|701|808)(?=\\d)";
 
 function trial(number) {
   let re = RegExp(regex);
