@@ -1,6 +1,6 @@
 :root{
     --primary-purple:rgb(118, 39, 109);
-    --primary-yellow: rgb(223, 151, 35); 
+    --primary-yellow: rgb(216, 151, 47); 
 }
 
 * {
@@ -12,6 +12,10 @@ body {
     margin: 0;
     overflow-x: hidden;
     background-color: rgb(237, 255, 248);
+    background-image: url("images/connect.svg");
+    background-repeat: no-repeat;
+    background-position: 54% 70%;
+    background-size: 65%;
 }
 
 .page-container {
@@ -135,17 +139,26 @@ body {
     padding: 0 3px;
 }
 
-.label-container label {
+.message-label-container {
+    position: absolute;
+    left: 25px;
+    bottom:94px;
+    text-align: center;
+    background-color: rgb(165, 188, 178);
+    border-radius: 5px;
+    padding: 0 3px;
+}
+
+.message-label-container label{
     font-size: 14px;
     font-weight: bold;
     color: var(--primary-purple);
 }
 
-#message {
-    position: relative;
-    bottom: 35px;
-    padding: 0 3px;
-    background-color: rgb(165, 188, 178);
+.label-container label {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--primary-purple);
 }
 
 .input-container input {
