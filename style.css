@@ -98,24 +98,15 @@ body {
     margin-top: 7%;
 }
 
-.top-div {
-    margin-top: 15%;
-    margin-left: 11.5%; 
-}
-
-.top-div .name-container{
-    display: flex;
-    justify-content: space-between;
-    width: 86%;
-}
-
-.bottom-div {
+.form-body-container {
     width: 80%;
-    margin-left: 10%;
+    margin: center;
+    margin-left: 8%;
+    margin-top: 16%;
 }
 
-.bottom-div button {
-    width: 97%;
+.form-body-container button {
+    width: 107%;
     height: 50px;
     border: 0px;
     border-radius: 4px;
@@ -124,7 +115,12 @@ body {
     cursor: pointer;
 }
 
-.input-container {
+.name-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-body-container .input-container {
     position: relative;
     padding-bottom: 22px;
 }
@@ -162,7 +158,7 @@ body {
 }
 
 .input-container input {
-    width: 90%;
+    width: 100%;
     height: auto;
     padding: 12px 10px ;
     border: 2px solid black;
@@ -172,7 +168,7 @@ body {
 }
 
 .input-container #Message {
-    width: 90%;
+    width: 100%;
     border: 2px solid black;
     border-radius: 4px;
     background-color: transparent;
@@ -183,26 +179,17 @@ body {
 .input-container img {
     position: absolute;
     bottom: 44%;
-    right: 4%;
+    right: 0%;
     max-width: 50px;
     height: 32px;
     display: none;
-}
-
-.top-div input {
-    width: 88%;
-}
-
-.top-div .label-container {
-    left: 19px;
 }
 
 .telecom-carrier {
     display: flex;
     position: absolute;
     top: 18%;
-    left: 10%;
-    margin-left: 1.5%;
+    left: 8%;
     align-items: center;
 }
 

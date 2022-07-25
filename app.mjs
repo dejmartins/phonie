@@ -2,6 +2,13 @@ let telephoneInput = {
   telephone: "",
 };
 
+let userDetails = {
+  firstname: "",
+  lastname: "",
+  email: "",
+  phone: "",
+};
+
 let currentTelecomCarrier = "";
 let currentPattern = "";
 
@@ -15,57 +22,47 @@ function startApp() {
   document.getElementById("telecomCarrier").addEventListener("change", (e) => {
     currentTelecomCarrier = e.target.value;
     setPattern();
-    isMatched();
   });
 }
 
 function setPattern() {
   if (currentTelecomCarrier === "mtn") {
     document.getElementById("telephone").pattern =
-      "^[+0234]+(?=803|816|903|810|806|703|706|813|814|906)(?=\\d)";
+      "^[+0234]+?(803|816|903|810|806|703|706|813|814|906)?[0-9]{7}";
     currentPattern =
-      "^[+0234]+(?=803|816|903|810|806|703|706|813|814|906)(?=\\d)";
+      "^[+0234]+?(803|816|903|810|806|703|706|813|814|906)?[0-9]{7}";
   }
 
   if (currentTelecomCarrier === "glo") {
     document.getElementById("telephone").pattern =
-      "^[+0234]+(?=805|905|807|811|705|815)(?=\\d)";
-    currentPattern = "^[+0234]+(?=805|905|807|811|705|815)(?=\\d)";
+      "^[+0234]+?(805|905|807|811|705|815)?[0-9]{7}";
+    currentPattern = "^[+0234]+?(805|905|807|811|705|815)?[0-9]{7}";
   }
 
   if (currentTelecomCarrier === "airtel") {
     document.getElementById("telephone").pattern =
-      "^[+0234]+(?=907|708|802|902|812|701|808)(?=\\d)";
-    currentPattern = "^[+0234]+(?=907|708|802|902|812|701|808)(?=\\d)";
+      "^[+0234]+?(907|708|802|902|812|701|808|904)?[0-9]{7}";
+    currentPattern = "^[+0234]+?(907|708|802|902|812|701|808|904)?[0-9]{7}";
   }
 
   if (currentTelecomCarrier === "9mobile") {
     document.getElementById("telephone").pattern =
-      "^[+0234]+(?=909|908|818|809|817)(?=\\d)";
-    currentPattern = "^[+0234]+(?=909|908|818|809|817)(?=\\d)";
+      "^[+0234]+?(909|908|818|809|817)?[0-9]{7}";
+    currentPattern = "^[+0234]+?(909|908|818|809|817)?[0-9]{7}";
   }
 }
 
 function isMatched() {
-  let re = new RegExp(currentPattern);
-  if (re.test(telephoneInput.telephone) && currentTelecomCarrier === "mtn") {
+  let isValid = document.getElementById("telephone").checkValidity();
+  if (isValid && currentTelecomCarrier === "mtn") {
     changeIcon(
       "https://www.mtn.ng/wp-content/themes/mtn-theme/images/mtn-new-logo.svg"
     );
-  } else if (
-    re.test(telephoneInput.telephone) &&
-    currentTelecomCarrier === "glo"
-  ) {
+  } else if (isValid && currentTelecomCarrier === "glo") {
     changeIcon("https://www.gloworld.com/logo.png");
-  } else if (
-    re.test(telephoneInput.telephone) &&
-    currentTelecomCarrier === "9mobile"
-  ) {
+  } else if (isValid && currentTelecomCarrier === "9mobile") {
     changeIcon("https://9mobile.com.ng/wp-content/uploads/2020/08/logo3.png");
-  } else if (
-    re.test(telephoneInput.telephone) &&
-    currentTelecomCarrier === "airtel"
-  ) {
+  } else if (isValid && currentTelecomCarrier === "airtel") {
     changeIcon("images/airtel-logo.png");
   } else {
     document.getElementById("telecomIcon").style.display = "none";

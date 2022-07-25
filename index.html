@@ -43,7 +43,7 @@
                     <h1>Get In Touch</h1>
                     <p>Our friendly team would love to hear from you</p>
                     
-                    <div action="" class="top-div">
+                    <div action="" class="form-body-container">
                         <div class="telecom-carrier">
                             <p>Choose your carrier:</p>
                             <div>
@@ -55,43 +55,42 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="name-container">
+                        <form action="">
+                            <div class="name-container">
+                                <div class="input-container">
+                                    <div class="label-container">
+                                        <label for="firstname">FirstName</label>
+                                    </div>
+                                    <input type="text" required>
+                                </div>
+                                <div class="input-container">
+                                    <div class="label-container">
+                                        <label for="lastName">LastName</label>
+                                    </div>
+                                    <input type="text" required>
+                                </div>
+                            </div>
                             <div class="input-container">
                                 <div class="label-container">
-                                    <label for="firstname">FirstName</label>
+                                    <label for="email">Email</label>
                                 </div>
-                                <input type="text">
+                                <input type="text" required>
                             </div>
                             <div class="input-container">
                                 <div class="label-container">
-                                    <label for="lastName">LastName</label>
+                                    <label for="phoneNumber">Phone Number</label>
                                 </div>
-                                <input type="text">
+                                <input type="tel" id="telephone" name="telephone" maxlength="14" pattern="" title="Invalid number for selected carrier" autocomplete="on" required>
+                                <img src="" alt="telecom icon" id="telecomIcon">
                             </div>
-                        </div>
-                
-                    </div>
-                    <div action="" class="bottom-div">
-                        <div class="input-container">
-                            <div class="label-container">
-                                <label for="email">Email</label>
+                            <div class="input-container">
+                                <div class="message-label-container">
+                                    <label for="email">Message</label>
+                                </div>
+                                <textarea name="Message" id="Message" cols="30" rows="3"></textarea>
                             </div>
-                            <input type="text">
-                        </div>
-                        <div class="input-container">
-                            <div class="label-container">
-                                <label for="phoneNumber">Phone Number</label>
-                            </div>
-                            <input type="text" id="telephone" name="telephone" maxlength="14" pattern="" title="Invalid number for selected carrier" autocomplete="on">
-                            <img src="" alt="telecom icon" id="telecomIcon">
-                        </div>
-                        <div class="input-container">
-                            <div class="message-label-container">
-                                <label for="email">Message</label>
-                            </div>
-                            <textarea name="Message" id="Message" cols="30" rows="3"></textarea>
-                        </div>
-                        <button type="submit">submit</button>
+                            <button type="submit" >submit</button>
+                        </form>
                     </div>
                 </div>
 
@@ -104,3 +103,5 @@
     <!-- // ============= EEND DO NOT EDIT ============== // -->
 </body>
 </html>
+
+<!-- pattern="^[+0234]+(?=907|708|802|902|812|701|808)(?=\\d)" -->
