@@ -1,12 +1,8 @@
-let telephoneInput = {
-  telephone: "",
-};
-
 let userDetails = {
   firstname: "",
   lastname: "",
   email: "",
-  phone: "",
+  telephone: "",
 };
 
 let currentTelecomCarrier = "";
@@ -14,14 +10,17 @@ let currentPattern = "";
 
 function startApp() {
   document.getElementById("telephone").addEventListener("input", (e) => {
-    telephoneInput[e.target.name] = e.target.value;
+    userDetails[e.target.name] = e.target.value;
     isMatched();
-    console.log(telephoneInput.telephone);
   });
 
   document.getElementById("telecomCarrier").addEventListener("change", (e) => {
     currentTelecomCarrier = e.target.value;
     setPattern();
+  });
+
+  document.getElementById("submit").addEventListener("click", (e) => {
+    console.log(userDetails);
   });
 }
 
